@@ -13,7 +13,7 @@ import { FaDocker } from "react-icons/fa";
 
 function NavBar() {
   return (
-    <div className="flex flex-col sm:flex-row w-full h-auto sm:h-[8%] p-4 sm:px-8 items-center bg-white shadow-md">
+    <div className="flex flex-col sm:flex-row w-full h-auto sm:h-[8%] p-4 sm:px-8 items-center bg-white shadow-md  fixed top-0 left-0 z-1000">
       <div className="logo flex items-center justify-center sm:justify-start w-full sm:w-[30%] mb-4 sm:mb-0">
         <Image
           className="h-auto"
