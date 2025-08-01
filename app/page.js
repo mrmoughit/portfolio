@@ -10,7 +10,7 @@ import { SiNestjs, SiExpress } from "react-icons/si";
 import { SiFastify, SiGooglecloud } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
-
+import { CiYoutube } from "react-icons/ci";
 function NavBar() {
   return (
     <div className="flex flex-col sm:flex-row w-full h-auto sm:h-[8%] p-4 sm:px-8 items-center bg-white shadow-md">
@@ -45,7 +45,7 @@ function AboutMe() {
   return (
     <div className="flex flex-col md:flex-row w-full h-auto md:h-[40%] mt-40 px-4 md:px-16 gap-8 ">
       <div className="about flex flex-col justify-center items-center md:items-start h-auto md:h-full w-full md:w-[60%] text-center md:text-left relative">
-        <div className="border-4 border-gray-500 p-6 rounded-md w-full md:w-auto">
+        <div className=" p-6 rounded-md w-full md:w-auto">
           <p className="text-3xl sm:text-5xl font-semibold">Hello I'm Zalaksya.</p>
           <p className="text-3xl sm:text-5xl font-semibold mt-2">Software Engineer</p>
           <p className="text-3xl sm:text-5xl font-semibold mt-2">Based in Morocco</p>
@@ -81,7 +81,7 @@ function AboutMe() {
         </div>
       </div>
 
-      <div className="image flex items-center justify-center h-auto md:h-full w-full md:w-[40%]">
+      <div className="image flex items-center justify-center h-auto  md:h-full w-full md:w-[40%]">
         <Image
           className="w-[70%] h-auto"
           src="/user.png"
@@ -130,12 +130,46 @@ function Skills() {
   );
 }
 
+
+function Project(){
+  return (
+    <div className="w-full h-auto bg-black">
+      <div className="My Experience p-8 flex justify-center "><h1 className="text-3xl text-white">My Projects</h1> </div>
+
+
+
+      <div className="flex flex-wrap items-center gap-3.5 bg-black h-auto ">
+        <div className=" w-[200px] h-[400px] bg-white ">
+          <Image className="w-full h-[50%]" src="" alt="" width={20} height={20}/>
+        </div>
+        <div className=" w-[200px] h-[400px] bg-white ">
+          <Image className="w-full h-[50%]" src="" alt="" width={20} height={20}/>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col">
       <NavBar />
       <AboutMe />
       <Skills />
+      <Project />
     </div>
   );
 }
