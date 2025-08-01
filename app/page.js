@@ -10,7 +10,7 @@ import { SiNestjs, SiExpress } from "react-icons/si";
 import { SiFastify, SiGooglecloud } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
-import { CiYoutube } from "react-icons/ci";
+
 function NavBar() {
   return (
     <div className="flex flex-col sm:flex-row w-full h-auto sm:h-[8%] p-4 sm:px-8 items-center bg-white shadow-md">
@@ -26,10 +26,10 @@ function NavBar() {
       </div>
       <div className="pther flex flex-col sm:flex-row justify-between items-center w-full sm:w-[70%] gap-4 sm:gap-0">
         <div className="flex flex-wrap justify-center sm:justify-start gap-4 text-lg sm:text-2xl">
-          <button className="hover:bg-sky-50 px-3 py-1 rounded">About Me</button>
-          <button className="hover:bg-sky-50 px-3 py-1 rounded">Skills</button>
-          <button className="hover:bg-sky-50 px-3 py-1 rounded">Project</button>
-          <button className="hover:bg-sky-50 px-3 py-1 rounded">Contact Me</button>
+          <a className="hover:bg-sky-50 px-3 py-1 rounded" href="#AboutMe">About Me</a>
+          <a className="hover:bg-sky-50 px-3 py-1 rounded  " href="#Skills">Skills</a>
+          <a className="hover:bg-sky-50 px-3 py-1 rounded  " href="#Project">Project</a>
+          <a className="hover:bg-sky-50 px-3 py-1 rounded  " href="#Contact">Contact Me</a>
         </div>
         <div>
           <button className="bg-black text-white text-lg sm:text-2xl flex items-center gap-2 px-5 py-2 rounded-xl hover:bg-gray-800 transition">
@@ -43,7 +43,7 @@ function NavBar() {
 
 function AboutMe() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-auto md:h-[40%] mt-40 px-4 md:px-16 gap-8 ">
+    <div id="AboutMe"className="flex flex-col md:flex-row w-full h-auto md:h-[40%] mt-40 px-4 md:px-16 gap-8 ">
       <div className="about flex flex-col justify-center items-center md:items-start h-auto md:h-full w-full md:w-[60%] text-center md:text-left relative">
         <div className=" p-6 rounded-md w-full md:w-auto">
           <p className="text-3xl sm:text-5xl font-semibold">Hello I'm Zalaksya.</p>
@@ -97,7 +97,7 @@ function AboutMe() {
 
 function Skills() {
   return (
-    <div className="w-full h-auto py-8 px-4 md:px-16">
+    <div id="Skills" className="w-full h-auto py-8 px-4 md:px-16">
       <div className="flex justify-center mb-6">
         <h1 className="text-3xl sm:text-5xl font-bold">My Skills</h1>
       </div>
@@ -133,32 +133,89 @@ function Skills() {
 
 function Project(){
   return (
-    <div className="w-full h-auto bg-black">
-      <div className="My Experience p-8 flex justify-center "><h1 className="text-3xl text-white">My Projects</h1> </div>
+    <div id="Project" className="w-full h-auto bg-black">
+      <div className="My Experience p-8 flex justify-center "><h1 className="text-3xl text-white ">My Projects</h1> </div>
 
 
 
-      <div className="flex flex-wrap items-center gap-3.5 bg-black h-auto ">
-        <div className=" w-[200px] h-[400px] bg-white ">
-          <Image className="w-full h-[50%]" src="" alt="" width={20} height={20}/>
+      <div className=" flex flex-wrap justify-center gap-3.5 bg-black ">
+
+        <div className="w-[200px] h-[300px] bg-white rounded-4xl">
+          <div className="w-full h-[40%]">
+              <Image className=" rounded-t-4xl" src="/bash.webp" alt="" width={200} height={20}/>
+          </div>
+          <div className="border-t-2 border-gray-500  bg-amber-200"></div>
+          <div className="flex justify-center "><h1>Minishell</h1></div>
+          <div className="no-scrollbar  max-h-30 overflow-y-auto p-2" style={{ scrollBehavior: 'smooth' }}>
+            <p className="text-2xl">
+              Minishell is a Unix shell created from scratch. It supports parsing and executing.  
+            </p>
+          </div>
+          <div className="flex justify-center items-center w-full h-[10%]"><button className="bg-black text-white  w-[30%]">Visit</button></div>
         </div>
-        <div className=" w-[200px] h-[400px] bg-white ">
-          <Image className="w-full h-[50%]" src="" alt="" width={20} height={20}/>
+
+
+        <div className="w-[200px] h-[300px] bg-white rounded-4xl">
+          <div className="w-full h-[40%]">
+              <Image className=" rounded-t-4xl" src="/bash.webp" alt="" width={200} height={20}/>
+          </div>
+          <div className="border-t-2 border-gray-500  bg-amber-200"></div>
+          <div className="flex justify-center "><h1>Minishell</h1></div>
+          <div className="no-scrollbar  max-h-30 overflow-y-auto p-2" style={{ scrollBehavior: 'smooth' }}>
+            <p className="text-2xl">
+              Minishell is a Unix shell created from scratch. It supports parsing and executing.  
+            </p>
+          </div>
+          <div className="flex justify-center items-center w-full h-[10%]"><button className="bg-black text-white  w-[30%]">Visit</button></div>
         </div>
+
+        <div className="w-[200px] h-[300px] bg-white rounded-4xl">
+          <div className="w-full h-[40%]">
+              <Image className=" rounded-t-4xl" src="/bash.webp" alt="" width={200} height={20}/>
+          </div>
+          <div className="border-t-2 border-gray-500  bg-amber-200"></div>
+          <div className="flex justify-center "><h1>Minishell</h1></div>
+          <div className="no-scrollbar  max-h-30 overflow-y-auto p-2" style={{ scrollBehavior: 'smooth' }}>
+            <p className="text-2xl">
+              Minishell is a Unix shell created from scratch. It supports parsing and executing.  
+            </p>
+          </div>
+          <div className="flex justify-center items-center w-full h-[10%]"><button className="bg-black text-white  w-[30%]">Visit</button></div>
+        </div>
+
+
+        <div className="w-[200px] h-[300px] bg-white rounded-4xl">
+          <div className="w-full h-[40%]">
+              <Image className=" rounded-t-4xl" src="/bash.webp" alt="" width={200} height={20}/>
+          </div>
+          <div className="border-t-2 border-gray-500  bg-amber-200"></div>
+          <div className="flex justify-center "><h1>Minishell</h1></div>
+          <div className="no-scrollbar  max-h-30 overflow-y-auto p-2" style={{ scrollBehavior: 'smooth' }}>
+            <p className="text-2xl">
+              Minishell is a Unix shell created from scratch. It supports parsing and executing.  
+            </p>
+          </div>
+          <div className="flex justify-center items-center w-full h-[10%] "><button className="bg-black text-white  w-[30%]">Visit</button></div>
+        </div>
+
+      <div className="bg-black w-full h-[2rem]"></div>
+
       </div>
+    </div>
+  );
+}
 
 
-
-
-
-
-
-
-
-
-
-
-    
+function Contact(){
+  return (
+    <div id="Contact" className="w-full h-[30rem] mt-8">
+      <div className="flex justify-center"><h1 className="text-3xl">Contact Me</h1></div>
+      <div className="flex flex-col items-center mt-5 gap-2.5">
+        <input placeholder="Your Name" className=" w-[90%] md:w-[50%] lg:w-[30%] h-[3rem] text-black pl-1  border-2 border-black" ></input>
+        <input  placeholder="Your Email"className=" w-[90%] md:w-[50%] lg:w-[30%] h-[3rem] text-black pl-1  border-2 border-black "></input>
+        <textarea  placeholder="Write Your Message For Me" className=" w-[90%] md:w-[50%] lg:w-[30%] h-[10rem] text-black pl-1  border-2 border-black "></textarea>
+      </div>
+      <div className="w-full h-[3rem] flex justify-center mt-2.5" ><button className="bg-black text-white text-2xl w-[100px] rounded-2xl">Submit</button></div>
     </div>
   );
 }
@@ -170,6 +227,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Project />
+      <Contact/>
     </div>
   );
 }
