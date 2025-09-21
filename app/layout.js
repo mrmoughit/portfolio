@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Nextjs App",
+  title: "Mrmoughit Dev",
   description: "Nextjs dev portfolio",
 };
 
