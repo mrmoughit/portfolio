@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Minishell",
+    "description": "A Unix shell implementation created from scratch in C. Features include command parsing, execution, pipes, redirections, environment variables, and built-in commands. Implements advanced shell functionalities with proper error handling.",
+    "image": "/bash.webp",
+    "technologies": ["C", "Unix", "Shell Scripting", "System Calls"],
+    "github": "https://github.com",
+    "demo": "https://demo.com",
+    "featured": true
+  },
+  {
+    "title": "E-Commerce Platform",
+    "description": "Full-stack e-commerce solution with modern design, secure payment integration, inventory management, user authentication, shopping cart, order tracking, and comprehensive admin dashboard.",
+    "image": "/ecommerce.webp",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "github": "https://github.com",
+    "demo": "https://demo.com",
+    "featured": true
+  },
+  {
+    "title": "E-Commerce Platform",
+    "description": "Full-stack e-commerce solution with modern design, secure payment integration, inventory management, user authentication, shopping cart, order tracking, and comprehensive admin dashboard.",
+    "image": "/ecommerce.webp",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "github": "https://github.com",
+    "demo": "https://demo.com",
+    "featured": true
+  },
+  {
+    "title": "Task Management System",
+    "description": "Collaborative project management application with real-time updates, team collaboration, file sharing, task assignment, progress tracking, notifications, and advanced reporting features.",
+    "image": "/taskmanager.webp",
+    "technologies": ["Next.js", "PostgreSQL", "Socket.io", "Prisma"],
+    "github": "https://github.com",
+    "demo": "https://demo.com",
+    "featured": false
+  },
+  {
+    "title": "Weather Analytics Dashboard",
+    "description": "Interactive weather dashboard with location-based forecasts, historical data analysis, weather alerts, data visualization charts, and integration with multiple weather APIs.",
+    "image": "/weather.webp",
+    "technologies": ["React", "Chart.js", "Weather API", "Tailwind"],
+    "github": "https://github.com",
+    "demo": "https://demo.com",
+    "featured": false
+  }
+]
