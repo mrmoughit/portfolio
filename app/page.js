@@ -55,7 +55,7 @@ function NavBar() {
           {/* Resume Button */}
           <div className="hidden md:flex">
             <a 
-              href="/Abdelmoughit ECHCHARBINY.docx"
+              href="/Abdelmoughit_Echcharbiny.pdf"
               download 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 font-medium"
             >
