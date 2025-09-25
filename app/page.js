@@ -31,14 +31,13 @@ function NavBar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+
           <div className="flex items-center">
             <div className="text-2xl font-bold text-gray-900">
               <span className="text-blue-600">A</span>bdelmoughit
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
               <button
@@ -52,7 +51,6 @@ function NavBar() {
             ))}
           </div>
 
-          {/* Resume Button */}
           <div className="hidden md:flex">
             <a 
               href="/Abdelmoughit_Echcharbiny.pdf"
@@ -76,7 +74,7 @@ function NavBar() {
 
           </div>
 
-          {/* Mobile Menu Button */}
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -89,7 +87,7 @@ function NavBar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+
         {isOpen && (
           <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1">
@@ -113,7 +111,7 @@ function NavBar() {
   );
 }
 
-// Hero/About Section
+
 function AboutMe() {
   const socialLinks = [
     { 
@@ -134,22 +132,14 @@ function AboutMe() {
       href: 'https://github.com', 
       label: 'GitHub' 
     },
-    // { 
-    //   icon: (
-    //     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-    //       <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-    //     </svg>
-    //   ), 
-    //   href: 'https://twitter.com', 
-    //   label: 'Twitter' 
-    // }
+
   ];
 
   return (
     <section id="about" className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
+
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
@@ -179,7 +169,7 @@ function AboutMe() {
               efficient applications that solve real-world problems and deliver exceptional user experiences.
             </p>
 
-            {/* Social Links */}
+
             <div className="flex items-center gap-4">
               <span className="text-gray-500 font-medium">Connect with me:</span>
               {socialLinks.map(({ icon, href, label }) => (
@@ -196,7 +186,6 @@ function AboutMe() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <button 
                 onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
@@ -213,21 +202,19 @@ function AboutMe() {
             </div>
           </div>
 
-          {/* Profile Image */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Background Elements */}
+
               <div className="absolute -top-8 -left-8 w-72 h-72 bg-blue-100 rounded-full opacity-50 animate-pulse"></div>
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-purple-100 rounded-full opacity-50 animate-pulse delay-1000"></div>
               
-              {/* Main Image Container */}
+
               <div className="relative z-10 w-80 h-80 rounded-full overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200">
                 <div className="w-full h-full flex items-center justify-center text-8xl">
                   <img src='/ba7a750f-8269-4115-9bdb-8a41be7c746a.jpg'/>
                 </div>
               </div>
-              
-              {/* Floating Elements */}
+
               <div className="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg animate-bounce delay-500">
                 <span className="text-2xl">⚡</span>
               </div>
@@ -242,7 +229,7 @@ function AboutMe() {
   );
 }
 
-// Skills Section
+
 function Skills() {
   const skillCategories = [
     {
@@ -285,7 +272,7 @@ function Skills() {
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             My Skills & Expertise
@@ -297,7 +284,7 @@ function Skills() {
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        {/* Skills Grid */}
+
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
           {skillCategories.map((category, categoryIndex) => (
             <div key={category.title} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -331,14 +318,14 @@ function Skills() {
   );
 }
 
-// Projects Section
+
 function Projects() {
   
 
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Featured Projects
@@ -350,7 +337,7 @@ function Projects() {
           <div className="w-24 h-1 bg-blue-500 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        {/* Projects Grid */}
+
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
@@ -359,7 +346,7 @@ function Projects() {
                 project.featured ? 'lg:col-span-1' : ''
               }`}
             >
-              {/* Project Image */}
+
               <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800">
                 <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
                   {project.title === 'Minishell' && '🐚'}
@@ -369,7 +356,7 @@ function Projects() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                 
-                {/* Featured Badge */}
+
                 {project.featured && (
                   <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
@@ -377,7 +364,7 @@ function Projects() {
                 )}
               </div>
 
-              {/* Project Content */}
+  
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                   {project.title}
@@ -387,7 +374,6 @@ function Projects() {
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -399,7 +385,7 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+
                 <div className="flex gap-4">
                   <a
                     href={project.github}
@@ -433,7 +419,6 @@ function Projects() {
   );
 }
 
-// Contact Section
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -521,7 +506,7 @@ const handleSubmit = async (e) => {
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Let's Work Together
@@ -534,7 +519,7 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
@@ -545,7 +530,7 @@ const handleSubmit = async (e) => {
               </p>
             </div>
 
-            {/* Contact Info Cards */}
+
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -566,7 +551,7 @@ const handleSubmit = async (e) => {
               ))}
             </div>
 
-            {/* Available for Work Badge */}
+
             <div className="p-6 bg-green-50 border border-green-200 rounded-xl">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
@@ -580,7 +565,7 @@ const handleSubmit = async (e) => {
             </div>
           </div>
 
-          {/* Contact Form */}
+
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send me a message</h3>
             
@@ -679,7 +664,6 @@ const handleSubmit = async (e) => {
   );
 }
 
-// Footer Component
 function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -709,23 +693,15 @@ function Footer() {
         </svg>
       )
     },
-    // {
-    //   name: 'Twitter',
-    //   href: 'https://twitter.com',
-    //   icon: (
-    //     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    //       <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-    //     </svg>
-    //   )
-    // }
+
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
+
         <div className="py-12 grid md:grid-cols-4 gap-8">
-          {/* Brand Section */}
+
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">Abdelmoughit</div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
@@ -748,7 +724,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -765,7 +741,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-300">
@@ -776,7 +752,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
@@ -792,7 +767,7 @@ function Footer() {
   );
 }
 
-// Main Home Component
+
 export default function Home() {
   return (
     <div className="w-full min-h-screen">

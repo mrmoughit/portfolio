@@ -1,20 +1,29 @@
 [
+    {
+    "title": "Webserv",
+    "description": "WebServ is a lightweight HTTP/1.1 web server built entirely in C++ as a minimalist clone of Nginx. It supports static file serving, CGI execution, virtual hosting, autoindexing, and non-blocking I/O. Designed for educational purposes, it demonstrates core concepts of networking, HTTP, and server architecture",
+    "image": "/weather.webp",
+    "technologies": ["C++", "OOP", "Low level programing", "Networking"],
+    "github": "https://github.com/mrmoughit/webserv",
+    "demo": "https://github.com/mrmoughit/webserv",
+    "featured": true
+  },
+  {
+    "title": "Inception",
+    "description": "Inception is a system administration and DevOps project at 42 School. Its goal is to introduce students to containerization using Docker and to configure a full virtualized infrastructure that hosts multiple services in isolated containers. The project reinforces concepts like Docker Compose, network architecture, service deployment, and secure configuration practices.",
+    "image": "/weather.webp",
+    "technologies": ["Docker", "Docker-compose", "Wordpress", "System administration"],
+    "github": "https://github.com/mrmoughit/inception",
+    "demo": "https://github.com/mrmoughit/inception",
+    "featured": false
+  },
   {
     "title": "Minishell",
     "description": "A Unix shell implementation created from scratch in C. Features include command parsing, execution, pipes, redirections, environment variables, and built-in commands. Implements advanced shell functionalities with proper error handling.",
     "image": "/bash.webp",
     "technologies": ["C", "Unix", "Shell Scripting", "System Calls"],
-    "github": "https://github.com",
-    "demo": "https://demo.com",
-    "featured": true
-  },
-  {
-    "title": "E-Commerce Platform",
-    "description": "Full-stack e-commerce solution with modern design, secure payment integration, inventory management, user authentication, shopping cart, order tracking, and comprehensive admin dashboard.",
-    "image": "/ecommerce.webp",
-    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
-    "github": "https://github.com",
-    "demo": "https://demo.com",
+    "github": "https://github.com/mrmoughit/minishell",
+    "demo": "https://github.com/mrmoughit/minishell",
     "featured": true
   },
   {
@@ -45,3 +54,4 @@
     "featured": false
   }
 ]
+
