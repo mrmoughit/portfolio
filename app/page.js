@@ -1,8 +1,133 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import projects  from "./data.json";
 import { Toaster, toast } from 'sonner';
+import { motion } from "framer-motion";
+import { FaHtml5    } from "react-icons/fa6";
+import {  FaCss3Alt   , FaJsSquare  , FaReact  , FaNodeJs  , FaDocker , FaAws} from "react-icons/fa";
+import { RiNextjsFill  } from "react-icons/ri";
+import { SiExpress , SiNestjs , SiFastify , SiTypescript , SiGooglecloud} from "react-icons/si";
+
+function SkillsGrid({skillCategories }) {
+  const [animatedLevels, setAnimatedLevels] = useState(
+    skillCategories.map((cat) => cat.skills.map(() => 0))
+  );
+
+  useEffect(() => {
+    const timers = [];
+
+    skillCategories.forEach((category, catIndex) => {
+      category.skills.forEach((skill, skillIndex) => {
+        timers.push(
+          setTimeout(() => {
+            setAnimatedLevels((prev) => {
+              const newLevels = [...prev];
+              newLevels[catIndex][skillIndex] = skill.level;
+              return newLevels;
+            });
+          }, 100) 
+        );
+      });
+    });
+
+    return () => timers.forEach((t) => clearTimeout(t));
+  }, [skillCategories]);
+
+  return (
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+      {skillCategories.map((category, catIndex) => (
+        <div
+          key={category.title}
+          className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            {category.title}
+          </h3>
+          <div className="space-y-6">
+            {category.skills.map((skill, skillIndex) => (
+              <div key={skill.name} className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{skill.icon}</span>
+                    <span className="font-semibold text-gray-800">{skill.name}</span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-600">
+                    {animatedLevels[catIndex][skillIndex]}%
+                  </span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${animatedLevels[catIndex][skillIndex]}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+
+
+
+function TypingEffect({
+  text,
+  typingSpeed = 100,
+  pauseBeforeRestart = 1500,
+  loop = true,
+}) {
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(text.slice(0, i + 1)); 
+      i++;
+
+      if (i >= text.length) {
+        clearInterval(interval);
+        if (loop) {
+          setTimeout(() => {
+            setDisplayedText("");
+            setIndex((prev) => prev + 1);
+          }, pauseBeforeRestart);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(interval);
+  }, [index, text, typingSpeed, pauseBeforeRestart, loop]);
+
+  return (
+    <div className="text-3xl text-black max-w-3xl leading-relaxed">
+      <motion.span
+        key={index}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+        style={{ whiteSpace: "pre-wrap" }} 
+      >
+        {displayedText}
+      </motion.span>
+
+      <motion.span
+        className="inline-block w-[8px] h-[1em] bg-black ml-[2px]"
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+      />
+    </div>
+  );
+}
+
+
+
+
+
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -156,18 +281,19 @@ function AboutMe() {
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-700">
                   Software Engineer
                 </h2>
-                <h3 className="text-2xl sm:text-3xl text-gray-600 flex items-center gap-2">
-                  Based in Morocco 
-                  <span className="text-2xl">🇲🇦</span>
-                </h3>
               </div>
             </div>
 
-            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              I'm a passionate software engineer with expertise in full-stack web development, 
+
+      <TypingEffect className="max-w-[10%] w-[10%]"
+          text="I'm a passionate software engineer with expertise in full-stack web development, 
               cloud technologies, and DevOps practices. I specialize in building scalable, 
-              efficient applications that solve real-world problems and deliver exceptional user experiences.
-            </p>
+              efficient applications that solve real-world problems and deliver exceptional user experiences."
+          speed={100}
+          loop={false} 
+      />
+
+
 
 
             <div className="flex items-center gap-4">
@@ -235,28 +361,28 @@ function Skills() {
     {
       title: "Frontend",
       skills: [
-        { name: 'HTML5', level: 95, icon: '🌐' },
-        { name: 'CSS3', level: 90, icon: '🎨' },
-        { name: 'JavaScript', level: 92, icon: '⚡' },
-        { name: 'React', level: 88, icon: '⚛️' },
-        { name: 'Next.js', level: 85, icon: '▲' }
+        { name: 'HTML5', level: 95, icon: <FaHtml5/> }, 
+        { name: 'CSS3', level: 90, icon: <FaCss3Alt /> },
+        { name: 'JavaScript', level: 92, icon: <FaJsSquare />},
+        { name: 'React', level: 88, icon: <FaReact />  },
+        { name: 'Next.js', level: 85, icon: <RiNextjsFill /> }
       ]
     },
     {
       title: "Backend",
       skills: [
-        { name: 'Node.js', level: 87, icon: '🟢' },
-        { name: 'Express', level: 85, icon: '🚂' },
-        { name: 'NestJS', level: 82, icon: '🐱' },
-        { name: 'Fastify', level: 80, icon: '⚡' }
+        { name: 'Node.js', level: 87, icon: <FaNodeJs /> },
+        { name: 'Express', level: 85, icon: <SiExpress/> },
+        { name: 'NestJS', level: 82, icon: <SiNestjs/> },
+        { name: 'Fastify', level: 80, icon: <SiFastify/> }
       ]
     },
     {
       title: "DevOps & Cloud",
       skills: [
-        { name: 'Docker', level: 85, icon: '🐳' },
-        { name: 'AWS', level: 78, icon: '☁️' },
-        { name: 'Google Cloud', level: 75, icon: '🌤️' }
+        { name: 'Docker', level: 85, icon: <FaDocker/> },
+        { name: 'AWS', level: 78, icon: <FaAws /> },
+        { name: 'Google Cloud', level: 75, icon: <SiGooglecloud/> }
       ]
     },
     {
@@ -264,7 +390,7 @@ function Skills() {
       skills: [
         { name: 'C++', level: 88, icon: '⚙️' },
         { name: 'C', level: 90, icon: '⚙️' },
-        { name: 'TypeScript', level: 85, icon: '📘' }
+        { name: 'TypeScript', level: 85, icon: <SiTypescript/> }
       ]
     }
   ];
@@ -274,9 +400,15 @@ function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          {/* <h2 className="text-4xl sm:text-5xl font-bold text-blue-100 mb-6">
             My Skills & Expertise
-          </h2>
+          </h2> */}
+
+          <h1 className="typing-gradient text-4xl font-bold whitespace-nowrap overflow-hidden  ">
+            My Skills & Expertise
+          </h1>
+
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I work with modern technologies and frameworks to build robust, scalable applications. 
             Here's my technical expertise across different domains.
@@ -285,34 +417,10 @@ function Skills() {
         </div>
 
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
-          {skillCategories.map((category, categoryIndex) => (
-            <div key={category.title} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                {category.title}
-              </h3>
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{skill.icon}</span>
-                        <span className="font-semibold text-gray-800">{skill.name}</span>
-                      </div>
-                      <span className="text-sm font-medium text-gray-600">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+
+        <SkillsGrid skillCategories={skillCategories} />
+
+        
       </div>
     </section>
   );
