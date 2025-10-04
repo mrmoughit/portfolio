@@ -12,9 +12,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mrmoughit Dev",
-  description: "Nextjs dev portfolio",
+  title: "Profile",
+  description: "Next.js dev portfolio",
+
 };
+
+
 
 export default function RootLayout({ children }) {
   return (

@@ -178,7 +178,7 @@ function NavBar() {
 
           <div className="hidden md:flex">
             <a 
-              href="/Abdelmoughit_Echcharbiny.pdf"
+              href="/cv_abdelmoughitechcharibny.pdf"
               download 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 font-medium"
             >
@@ -225,9 +225,11 @@ function NavBar() {
                   {item}
                 </button>
               ))}
+               <a href="/cv_abdelmoughitechcharibny.pdf"  download >
               <button className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Resume
               </button>
+              </a>
             </div>
           </div>
         )}
