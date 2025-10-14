@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Profile",
   description: "Next.js dev portfolio",
+    icons: {
+    icon: '/site-icon.ico',
+  },
 
 };
 
