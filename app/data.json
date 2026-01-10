@@ -2,7 +2,7 @@
     {
     "title": "Webserv",
     "description": "WebServ is a lightweight HTTP/1.1 web server built entirely in C++ as a minimalist clone of Nginx. It supports static file serving, CGI execution, virtual hosting, autoindexing, and non-blocking I/O. Designed for educational purposes, it demonstrates core concepts of networking, HTTP, and server architecture",
-    "image": "/weather.webp",
+    "image": "/webserv.webp",
     "technologies": ["C++", "OOP", "Low level programing", "Networking"],
     "github": "https://github.com/mrmoughit/webserv",
     "demo": "https://github.com/mrmoughit/webserv",
@@ -11,7 +11,7 @@
   {
     "title": "Inception",
     "description": "Inception is a system administration and DevOps project at 42 School. Its goal is to introduce students to containerization using Docker and to configure a full virtualized infrastructure that hosts multiple services in isolated containers. The project reinforces concepts like Docker Compose, network architecture, service deployment, and secure configuration practices.",
-    "image": "/weather.webp",
+    "image": "/docker.webp",
     "technologies": ["Docker", "Docker-compose", "Wordpress", "System administration"],
     "github": "https://github.com/mrmoughit/inception",
     "demo": "https://github.com/mrmoughit/inception",
@@ -38,16 +38,16 @@
   {
     "title": "Task Management System",
     "description": "Collaborative project management application with real-time updates, team collaboration, file sharing, task assignment, progress tracking, notifications, and advanced reporting features.",
-    "image": "/taskmanager.webp",
+    "image": "/todo.webp",
     "technologies": ["Next.js", "PostgreSQL", "Socket.io", "Prisma"],
     "github": "https://github.com",
     "demo": "https://demo.com",
     "featured": false
   },
   {
-    "title": "Weather Analytics Dashboard",
+    "title": "Weather app",
     "description": "Interactive weather dashboard with location-based forecasts, historical data analysis, weather alerts, data visualization charts, and integration with multiple weather APIs.",
-    "image": "/weather.webp",
+    "image": "/weaher.webp",
     "technologies": ["React", "Chart.js", "Weather API", "Tailwind"],
     "github": "https://github.com",
     "demo": "https://demo.com",

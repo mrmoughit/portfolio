@@ -459,10 +459,10 @@ function Projects() {
 
               <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800">
                 <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
-                  {project.title === 'Minishell' && '🐚'}
-                  {project.title === 'E-Commerce Platform' && '🛒'}
-                  {project.title === 'Task Management System' && '📋'}
-                  {project.title === 'Weather Analytics Dashboard' && '🌤️'}
+                  {project.title === 'Minishell' && ''}
+                  {project.title === 'E-Commerce Platform' && ''}
+                  {project.title === 'Task Management System' && ''}
+                  {project.title === 'Weather Analytics Dashboard' && ''}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                 
@@ -472,8 +472,10 @@ function Projects() {
                     Featured
                   </div>
                 )}
+                <div className="h-full flex flex-col justify-center w-full">
+                  <img className="" src={project.image} alt="logo"/>
+                </div>
               </div>
-
   
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
@@ -508,7 +510,7 @@ function Projects() {
                     </svg>
                     Code
                   </a>
-                  <a
+                  {/* <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -518,7 +520,7 @@ function Projects() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     Live Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
