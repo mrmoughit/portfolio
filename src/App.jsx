@@ -1,0 +1,28 @@
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import CLI from './components/CLI';
+
+function App() {
+  const [isCLIOpen, setIsCLIOpen] = useState(false);
+
+  return (
+    <div className="bg-slate-950 min-h-screen text-white font-sans selection:bg-violet-500/30">
+      <Navbar toggleCLI={() => setIsCLIOpen(!isCLIOpen)} />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+      <CLI isOpen={isCLIOpen} onClose={() => setIsCLIOpen(false)} />
+    </div>
+  );
+}
+
+export default App;

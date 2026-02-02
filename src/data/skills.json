@@ -1,0 +1,34 @@
+[
+    {
+        "name": "React.js / Next.js",
+        "category": "Frontend"
+    },
+    {
+        "name": "Tailwind CSS",
+        "category": "Frontend"
+    },
+    {
+        "name": "Node.js",
+        "category": "Backend"
+    },
+    {
+        "name": "Docker / compose",
+        "category": "DevOps"
+    },
+    {
+        "name": "Linux",
+        "category": "DevOps"
+    },
+    {
+        "name": "C/C++",
+        "category": "Languages"
+    },
+    {
+        "name": "Git/GitHub",
+        "category": "Tools"
+    },
+    {
+        "name": "Mysql / sqlite",
+        "category": "Backend"
+    }
+]

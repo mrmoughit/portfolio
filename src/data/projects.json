@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Minishell",
+        "description": "A lightweight Unix shell in C, reproducing core Bash behavior.",
+        "longDescription": "Minishell — Custom Unix Shell (C) Developed a lightweight Unix shell in C, reproducing core Bash behavior. The project focuses on low-level system programming, including process creation, command parsing, pipes, redirections, and signal handling.Implemented a full execution pipeline: lexical analysis, parsing, environment variable expansion, and command execution using fork, execve, pipe, and dup2. Handled built-in commands (cd, echo, export, unset, env, exit) with correct parent/child process behavior. Ensured robust error handling, accurate exit codes, and memory safety (Valgrind-clean). Technologies: C, Unix system calls, Bash behavior, Makefile Key skills: Process management, file descriptors, parsing, low-level debugging",
+        "tech": [
+            "C",
+            "process",
+            "Unix system calls",
+            "Bash behavior",
+            "Makefile"
+        ],
+        "github": "https://github.com/mrmoughit/minishell",
+        "live": "#",
+        "image": "https://itsfoss.com/content/images/wordpress/2019/01/bash-logo.jpg",
+        "video": "minishell.mov"
+    },
+    {
+        "title": "Rycasting engine",
+        "description": "A 3D raycasting engine inspired by Wolfenstein 3D.",
+        "longDescription": "Cub3D — 3D Raycasting Engine (C) Developed a mini 3D engine in C using raycasting to render a first-person perspective environment, inspired by early 90s games like Wolfenstein 3D. Implemented full player movement, collision detection, and 3D rendering based on angles and trigonometry, converting a 2D map into a pseudo-3D view. Key features: Raycasting with angles: Cast rays from the player’s position at incremental angles to detect walls and render vertical slices. Player control: Smooth movement, rotation, and collision handling using a 2D grid map. Textures: Applied wall and sprite textures with proper scaling according to ray distance. Mini-map: 2D overhead view for debugging and navigation. Keyboard and mouse input: Interactive control of the camera and player orientation. Optimization: Efficient per-frame calculations using angle-based raycasting, minimizing redundant computations. Technologies: C, Unix system calls, MiniLibX, 2D arrays, trigonometry Key skills: Game development, raycasting, vector math, rendering pipeline, low-level graphics",
+        "tech": [
+            "C",
+            "Unix system calls",
+            "MiniLibX",
+            "2D arrays",
+            "trigonometry"
+        ],
+        "github": "https://github.com/mrmoughit/cub3d",
+        "live": "#",
+        "image": "https://images.gog-statics.com/abd7f3307cd163042dbc1533d50d833d05ac084a2cf0a5b57ad06c78b29dbcce_product_card_v2_mobile_slider_639.jpg",
+        "video": "/cub.mov"
+    },
+    {
+        "title": "Multiple player ping pong game",
+        "description": "Real-Time Multiplayer Web Platform",
+        "longDescription": "ft_transcendence is a full-stack real-time web application built as part of the 42/1337 curriculum. The project is centered around an online Ping Pong game ecosystem, combining real-time communication, authentication, security, and scalability. The platform features live gameplay powered by WebSockets, enabling real-time player actions, smooth game synchronization, and instant score updates. It includes matchmaking and tournament systems, allowing players to compete in ranked matches or structured tournaments. Authentication is handled securely using OAuth, supporting both Google and Intra (42) login. The application is protected with a Web Application Firewall (WAF) using ModSecurity, adding an extra layer of security against common web attacks. Tournament results are persisted on the blockchain, ensuring transparency and integrity of competitive scores. Each match generates detailed statistics, and a Server-Side Rendered (SSR) dashboard displays player performance and game history. The entire system is fully containerized with Docker, making it portable, scalable, and easy to deploy. Tech Stack: Frontend: Next.js (SSR) Backend: Fastify Database: SQLite Real-Time Communication: WebSockets Security: ModSecurity (WAF) Authentication: Google OAuth & Intra OAuth Infrastructure: Docker (multi-container setup) Blockchain: Tournament score storage",
+        "tech": [
+            "next.js",
+            "fastify",
+            "typescript",
+            "websocket",
+            "redis",
+            "docker compose"
+        ],
+        "github": "#",
+        "live": "#",
+        "image": "https://cdn.aptoide.com/imgs/8/0/7/807f37e41bb078de90a11c67a7857032_screen.png",
+        "video": "/trans.webm"
+    },
+    {
+        "title": "Push swap",
+        "description": "Sorting algorithm implementation",
+        "longDescription": "I built an algorithm-focused sorting program that efficiently orders a list of integers using a restricted set of stack operations. The solution is designed around two stacks and a limited instruction set, requiring careful optimization to minimize the total number of moves. The core of the implementation is based on the Longest Increasing Subsequence (LIS) algorithm. By identifying elements already in optimal order, the program preserves them in the main stack while selectively moving non-LIS elements to the auxiliary stack. This significantly reduces unnecessary operations and improves overall efficiency. To further optimize performance, I implemented a best-move strategy that calculates the optimal sequence of rotations and pushes for each element, ensuring the lowest possible cost before executing a move. This approach dynamically evaluates the most efficient action at every step, leading to a reduced number of instructions. The project emphasizes algorithmic thinking, optimization, and time complexity analysis, while also demonstrating strong skills in C programming, memory management, and problem-solving under strict constraints.",
+        "tech": [
+            "c",
+            "data structures",
+            "longest increasing subsequence"
+        ],
+        "github": "#",
+        "live": "#",
+        "image": "https://img.itch.zone/aW1nLzExMTc1NTE5LnBuZw==/original/br2IQZ.png",
+        "video": "/push_swap.mov"
+    },
+    {
+        "title": "HTTP/1.1 web server",
+        "description": "HTTP/1.1 web server",
+        "longDescription": "Built a custom HTTP/1.1 web server in C++ from scratch, implementing low-level socket programming, non-blocking I/O, and request/response  handling. Designed support for multiple concurrent clients, configuration parsing, and dynamic content execution while focusing on performance, stability, and memory management.",
+        "tech": [
+            "c++",
+            "HTTP/1.1",
+            "nginx",
+            "cgi"
+        ],
+        "github": "#",
+        "live": "#",
+        "image": "https://www.oreilly.com/api/v2/epubs/urn:orm:book:9781789349863/files/assets/5d678947-2cad-44df-a4a4-5e78fd50fb52.png",
+        "video": null
+    },
+    {
+        "title": "inception",
+        "description": "Dashboard for monitoring server health and resource usage metrics.",
+        "longDescription": "A DevOps-focused dashboard that visualizes real-time metrics from cloud infrastructure. It connects to AWS CloudWatch APIs to display CPU usage, memory consumption, and network traffic. The frontend uses D3.js for complex data visualization and provides alert notifications for threshold breaches.",
+        "tech": [
+            "Docker",
+            "cocker-compose",
+            "mariadb",
+            "wordpress",
+            "nginx"
+        ],
+        "github": "#",
+        "live": "#",
+        "image": "https://user-images.githubusercontent.com/54292953/147146268-a616f39a-3f16-41f8-80c9-db5494c3dfe7.png",
+        "video": null
+    },
+    {
+        "title": "Philosophers",
+        "description": "The Dining Philosophers Problem",
+        "longDescription": "I developed a concurrency-focused simulation that solves the classic Dining Philosophers problem, with an emphasis on thread synchronization, resource sharing, and deadlock prevention. The program simulates multiple philosophers as concurrent threads, where each philosopher must eat, sleep, and think while competing for shared resources (forks). To ensure correct behavior, I implemented precise mutex-based synchronization to protect shared data and control access to forks, preventing race conditions and deadlocks. The project includes accurate time management to track philosopher states and detect starvation, ensuring the simulation stops correctly when a philosopher dies or when all required meals are completed. Special care was taken to optimize locking strategies to maintain performance while preserving correctness. This project demonstrates strong understanding of multithreading, synchronization primitives, concurrency patterns, and low-level programming in C, with a focus on writing safe, efficient, and deterministic concurrent systems.",
+        "tech": [
+            "C",
+            "pthread",
+            "data race handling"
+        ],
+        "github": "#",
+        "live": "#",
+        "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxuhgni9ifz9d1uo1red2.png",
+        "video": null
+    }
+]
