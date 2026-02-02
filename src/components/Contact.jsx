@@ -86,8 +86,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold">Email Me</h4>
-                                    <a href={`mailto:${import.meta.env.VITE_EMAIL}`} className="text-gray-400 hover:text-white transition-colors">
-                                        {import.meta.env.VITE_EMAIL}
+                                    <a href={`mailto:${import.meta.env.VITE_EMAIL || 'contact@example.com'}`} className="text-gray-400 hover:text-white transition-colors">
+                                        {import.meta.env.VITE_EMAIL || 'contact@example.com'}
                                     </a>
                                 </div>
                             </div>
@@ -100,8 +100,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold">GitHub</h4>
-                                    <a href={import.meta.env.VITE_GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                        {import.meta.env.VITE_GITHUB_URL.replace('https://', '')}
+                                    <a href={import.meta.env.VITE_GITHUB_URL || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        {(import.meta.env.VITE_GITHUB_URL || 'github.com/mrmoughit').replace('https://', '')}
                                     </a>
                                 </div>
                             </div>
@@ -114,8 +114,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold">LinkedIn</h4>
-                                    <a href={import.meta.env.VITE_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                        linkedin.com/in/abdelmoughit-echcharbiny
+                                    <a href={import.meta.env.VITE_LINKEDIN_URL || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        {(import.meta.env.VITE_LINKEDIN_URL || 'linkedin.com/in/moughit').replace('https://', '')}
                                     </a>
                                 </div>
                             </div>

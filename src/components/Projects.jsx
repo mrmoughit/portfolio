@@ -110,7 +110,7 @@ const Projects = () => {
                                         Overview
                                     </h4>
                                     <div className="text-gray-300 leading-relaxed text-lg space-y-4">
-                                        {selectedProject.longDescription.split('. ').map((sentence, index) => {
+                                        {(selectedProject.longDescription || '').split('. ').map((sentence, index) => {
                                             if (sentence.includes(':')) {
                                                 const [key, ...rest] = sentence.split(':');
                                                 // Check if it's a likely header (short key)
