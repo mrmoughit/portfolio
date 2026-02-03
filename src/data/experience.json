@@ -1,0 +1,18 @@
+[
+    {
+        "company": "el-afdl",
+        "role": "devops engineer",
+        "duration": "Feb 2025-Present",
+        "description": "I deploy and maintain production web applications across multi-cloud environments (GCP, Oracle Cloud, AWS), focusing on automation, reliability, and performance. By architecting CI/CD pipelines with GitHub Actions and GitLab CI, I reduced deployment cycles from manual processes to automated 10-minute workflows. I implement infrastructure best practices including staging/production separation, Docker containerization for reproducible builds, and CDN integration that improved page load times by 40%. My infrastructure management maintains 99.9% uptime through load balancing, auto-scaling groups, and infrastructure-as-code practices that enable consistent provisioning and disaster recovery capabilities.",
+        "technologies": [
+            "docker",
+            "docker-compose",
+            "nginx",
+            "githbu actions",
+            "aws ec2",
+            "load balancing",
+            "gcp compute engine",
+            "gcp storage bucket"
+        ]
+    }
+]

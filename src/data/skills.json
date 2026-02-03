@@ -1,6 +1,6 @@
 [
     {
-        "name": "React.js / Next.js",
+        "name": "React.js / Next.js / vite",
         "category": "Frontend"
     },
     {
@@ -8,11 +8,11 @@
         "category": "Frontend"
     },
     {
-        "name": "Node.js",
+        "name": "Node.js / Nest.js / fastify.js / Express.js",
         "category": "Backend"
     },
     {
-        "name": "Docker / compose",
+        "name": "Docker / docker-compose",
         "category": "DevOps"
     },
     {
@@ -28,7 +28,8 @@
         "category": "Tools"
     },
     {
-        "name": "Mysql / sqlite",
+        "name": "Mysql / postgresql / sqlite",
         "category": "Backend"
     }
+
 ]
