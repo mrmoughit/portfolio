@@ -86,8 +86,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold">Email Me</h4>
-                                    <a href={`mailto:${import.meta.env.VITE_EMAIL || 'contact@example.com'}`} className="text-gray-400 hover:text-white transition-colors">
-                                        {import.meta.env.VITE_EMAIL || 'contact@example.com'}
+                                    <a href={`mailto:${import.meta.env.VITE_EMAIL || 'moughit.echcharbiny@gmail.com'}`} className="text-gray-400 hover:text-white transition-colors">
+                                        {import.meta.env.VITE_EMAIL || 'moughit.echcharbiny@gmail.com'}
                                     </a>
                                 </div>
                             </div>
