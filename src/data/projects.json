@@ -29,7 +29,7 @@
         "github": "https://github.com/mrmoughit/cub3d",
         "live": "#",
         "image": "https://images.gog-statics.com/abd7f3307cd163042dbc1533d50d833d05ac084a2cf0a5b57ad06c78b29dbcce_product_card_v2_mobile_slider_639.jpg",
-        "video": "/cub.mov"
+        "video": null
     },
     {
         "title": "Multiple player ping pong game",
@@ -46,7 +46,7 @@
         "github": "#",
         "live": "#",
         "image": "https://cdn.aptoide.com/imgs/8/0/7/807f37e41bb078de90a11c67a7857032_screen.png",
-        "video": "/trans.webm"
+        "video": "trans.webm"
     },
     {
         "title": "Push swap",
@@ -60,7 +60,7 @@
         "github": "#",
         "live": "#",
         "image": "https://img.itch.zone/aW1nLzExMTc1NTE5LnBuZw==/original/br2IQZ.png",
-        "video": "/push_swap.mov"
+        "video": "push_swap.mov"
     },
     {
         "title": "HTTP/1.1 web server",
