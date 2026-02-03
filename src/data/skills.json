@@ -1,35 +1,72 @@
 [
     {
-        "name": "React.js / Next.js / vite",
-        "category": "Frontend"
+        "name": "React.js / Next.js",
+        "category": "Frontend",
+        "level": "Expert"
     },
     {
         "name": "Tailwind CSS",
-        "category": "Frontend"
+        "category": "Frontend",
+        "level": "Expert"
     },
     {
-        "name": "Node.js / Nest.js / fastify.js / Express.js",
-        "category": "Backend"
+        "name": "Vite / Javascript",
+        "category": "Frontend",
+        "level": "Advanced"
+    },
+    {
+        "name": "Node.js / Express.js",
+        "category": "Backend",
+        "level": "Advanced"
+    },
+    {
+        "name": "Nest.js / Fastify.js",
+        "category": "Backend",
+        "level": "Intermediate"
+    },
+    {
+        "name": "MySQL / PostgreSQL",
+        "category": "Backend",
+        "level": "Advanced"
+    },
+    {
+        "name": "SQLite / Redis",
+        "category": "Backend",
+        "level": "Intermediate"
     },
     {
         "name": "Docker / docker-compose",
-        "category": "DevOps"
+        "category": "DevOps",
+        "level": "Advanced"
     },
     {
-        "name": "Linux",
-        "category": "DevOps"
+        "name": "Linux / Shell Scripting",
+        "category": "DevOps",
+        "level": "Advanced"
     },
     {
-        "name": "C/C++",
-        "category": "Languages"
+        "name": "GitHub Actions / CI/CD",
+        "category": "DevOps",
+        "level": "Intermediate"
     },
     {
-        "name": "Git/GitHub",
-        "category": "Tools"
+        "name": "AWS / GCP",
+        "category": "DevOps",
+        "level": "Intermediate"
     },
     {
-        "name": "Mysql / postgresql / sqlite",
-        "category": "Backend"
+        "name": "C / C++",
+        "category": "Languages",
+        "level": "Advanced"
+    },
+    {
+        "name": "Python",
+        "category": "Languages",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Git / GitHub",
+        "category": "Tools",
+        "level": "Advanced"
     }
-
 ]
